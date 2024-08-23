@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded",()=>{
                 console.log(success.coords);
                 drawMap([latitude,longitude],accuracy);
             },
-            (error)=>console.error(error),
+            function(error){
+                console.error(error);
+            },
             {
                 enableHighAccuracy: true,
                 timeout: 5000,
